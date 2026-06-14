@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+    background-image:url("expense.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* Form Card */
+form{
+    width:90%;
+    max-width:700px;
+    background:rgba(255,255,255,0.85);
+    padding:40px;
+    border-radius:25px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Each row */
+.notes,
+.amount{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+/* Labels */
+.notes label,
+.amount label{
+    min-width:120px;
+    font-size:clamp(18px,2vw,28px);
+    font-weight:bold;
+}
+/* Inputs */
+.notes input,
+.amount input{
+    flex:1;
+    height:55px;
+    border:2px solid #555;
+    border-radius:12px;
+    font-size:18px;
+    padding:0 15px;
+}
+/* Submit Button */
+form button{
+    width:160px;
+    height:55px;
+    margin:auto;
+    border:none;
+    border-radius:15px;
+    background:#2f995a;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* Navigation Buttons */
+.exit,
+.back{
+    position:fixed;
+    bottom:70px;
+    width:180px;
+    height:70px;
+    border:none;
+    border-radius:20px;
+    background:#c2186a;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.exit{
+    left:5%;
+}
+.back{
+    right:5%;
+}
+
+/* Tablet */
+@media (max-width:900px){
+    .exit,
+    .back{
+        width:140px;
+        height:60px;
+        font-size:18px;
+    }
+}
+/* Mobile */
+@media (max-width:600px){
+    form{
+        width:95%;
+        padding:25px;
+    }
+    .notes,
+    .amount{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .notes label,
+    .amount label{
+        min-width:auto;
+    }
+    .notes input,
+    .amount input{
+        width:100%;
+    }
+    .exit,
+    .back{
+        width:120px;
+        height:50px;
+        bottom:20px;
+        font-size:16px;
+    }
+    .exit{
+        left:10px;
+    }
+    .back{
+        right:10px;
+    }
+}
